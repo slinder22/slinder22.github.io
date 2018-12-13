@@ -1,0 +1,262 @@
+/* MAIN SECTION (Note this has much in common with middle-athletics.css) */
+div#main-container {
+    width: 100%;
+    background-image: url('../images/vintage-concrete.png');
+}
+
+main {
+    width:inherit;
+    max-width: 100%;
+    display:flex;
+    margin: 0 auto;
+    margin-top:20px;
+    flex-direction: row; /* aside and section are side-by-side */
+}
+main aside a {
+    color: black;
+}
+#left-sidebar a:hover, #left-sidebar a:focus {
+    color: black; /* !important; */
+    text-decoration: underline; /* !important; */
+}
+main aside#left-sidebar {
+    width: 256px;
+    height: auto;
+    flex-grow: 1;
+/*    background-color: #061844;*/
+    margin-top: 0.9px;
+}
+main aside#left-sidebar nav#left-nav {
+    margin-bottom: 80px;
+}
+main aside#left-sidebar nav#left-nav ul li first-child {
+    border-top: none;
+}
+main aside#left-sidebar nav#left-nav ul li last-child {
+    border-bottom: none;
+}
+main aside#left-sidebar nav#left-nav ul {
+    font-size: 1.02em;
+    margin-left: 30px;
+}
+main aside#left-sidebar nav#left-nav ul li {
+    padding: 10px 0 10px 10px;
+    display: block;
+    border-bottom: 0.5px solid rgba(255,255,255,0.5);
+}
+main aside#left-sidebar nav#left-quicklinks ul {
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+main aside#left-sidebar nav#left-quicklinks ul li {
+    padding: 10px 0 10px 10px;
+    display: block;
+    border-top: 1.5px solid #fff;
+    background-color: #8e001c;
+}
+main aside#left-sidebar nav#left-quicklinks ul li:last-child {
+    border-bottom: none;
+    border-top: none;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 30px;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+}
+main aside#left-sidebar nav#left-quicklinks ul li:first-child {
+    border-top: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 30px;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+}
+main section#right-section {
+    width: calc(100% - 256px);
+    height: auto;
+    flex-grow: 1;
+/*    background-color: rgb(242, 240, 229);*/
+    color: #000;
+    position: relative;
+}
+ div#page-banner-image {
+    width: 1400px;
+     max-width: 100%;
+     margin: 0 auto;
+     height: 400px;
+    background-image: url('../images/student-life-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+/*    padding-bottom: 28.31%;  205 / 724 = 28.31% */
+                            /* This is a bit of a trick to ensure that
+                               the #page-banner-image div height remains proportional
+                               to the div's width */
+}
+
+@media only screen and (max-width: 988px) {
+    div#page-banner-image {
+        height: 0;
+        max-height: 100px;
+        padding-bottom: 52.33%;
+    }
+}
+main section#right-section div#breadcrumbs  {
+    width: 100%;
+    padding-top: 10px;
+    text-align: left;
+}
+main section#right-section div#breadcrumbs p {
+    margin-right: 24px;
+    color: #535251;
+    font-size: 1em;
+}
+main section#right-section div#breadcrumbs a {
+    text-decoration: underline;
+    color: #535251;
+}
+main section#right-section div#breadcrumbs a:hover, main section#right-section div#breadcrumbs a:focus {
+    text-decoration: none;
+}
+main section#right-section div#breadcrumbs span {
+    font-weight: bold;
+}
+main section#right-section div#page-content {
+    margin: 0 25px 100px;
+
+}
+main section#right-section div#page-content div.student-life-section{
+    display: block;
+    min-height: 250px;
+    width: 100%;
+/*    background-color: greenyellow;*/
+}
+main section#right-section div#page-content h1 {
+    font-weight: bold;
+    font-family: 'Economica', sans-serif;
+    margin: 10px auto;
+    color: #9c6409;
+    font-size: 2.3em;
+}
+main section#right-section div#page-content h2 {
+    font-weight: normal;
+/*    color: cadetblue;*/
+    margin: 10px auto;
+    font-size: 1.3em;
+    color: #8e001c;
+}
+main section#right-section div#page-content p {
+    font-size: 0.9em;
+    margin: 20px auto;
+    padding-bottom: 15px;
+
+}
+main section#right-section div#page-content a {
+    color: #9c6409;
+    text-decoration: underline;
+}
+main section#right-section div#page-content a:hover, main section#right-section div#page-content a:focus {
+    color: #9c182f;
+    text-decoration: none;
+}
+/* for RWD (Responsive Web Design) */
+@media only screen and (max-width: 700px) {
+    main {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column-reverse; /* ensures section is stacked ABOVE aside */
+    }
+    main aside#left-sidebar {
+        width: 100%;
+        height: auto;
+        flex-grow: 1;
+        background-color: transparent;
+
+    }
+    main aside#left-sidebar nav#left-nav {
+        margin-bottom: 20px;
+/*        margin-top: -390px;*/
+    }
+    main section#right-section {
+        width: 100%;
+        height: auto;
+        flex-grow: 1;
+
+        color: #000;
+    }
+}
+
+/* styles for right-floated-div */
+#optional-right-floated-image {
+    float: right;
+    width: 210px;
+    height: 210px;
+    margin-left: 20px;
+    background-image:url('../images/sand-shark-logo.png');
+    background-size: contain;
+}
+
+/*Styles for table on Athletics & Recreation page */
+main section#right-section div#page-content table.athletics-calendar {
+    font-family: Verdana, Arial, sans-serif;
+    width: 100%;
+}
+main section#right-section div#page-content table.athletics-calendar tr.table-month td {
+    font-size: 1.4em;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 3px;
+    padding-top: 10px;
+    color: #222;
+}
+main section#right-section div#page-content table.athletics-calendar tr {
+    text-align: left;
+    font-size: 0.75em;
+    vertical-align: top;
+}
+main section#right-section div#page-content table.athletics-calendar tr.table-column-headers {
+    color: #9c182f;
+    background-color: #eddfca;
+}
+main section#right-section div#page-content table.athletics-calendar tr.table-column-data {
+    background-color: #fff;
+}
+main section#right-section div#page-content table.athletics-calendar th, table.athletics-calendar td {
+    padding: 5px;
+    border-top: 1px solid #AAA;
+}
+main section#right-section div#page-content table.athletics-calendar td.table-date {
+    font-weight: bold;
+}
+main section#right-section div#page-content table.athletics-calendar td a {
+    color: #000;
+    text-decoration: none;
+}
+main section#right-section div#page-content table.athletics-calendar td a:hover,
+main section#right-section div#page-content table.athletics-calendar td a:focus {
+    text-decoration: underline;
+}
+
+img.oval {
+    width:400px;height: 250px; border-radius: 50%; float: right;
+}
+img#oval1{
+    float:left;
+
+}
+@media only screen and (max-width: 700px) {
+    div#p {
+       display: block;
+/*       clear: both;*/
+    }
+    img.oval {
+        display: block;
+/*        clear: both;*/
+        width: 350px;
+        height: 225px;
+    }
+
+}
+
+

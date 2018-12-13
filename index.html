@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <title>USCB - University of South Carolina Beaufort</title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- always make sure normalize.css is linked first -->
+        <link rel="stylesheet" href="styles/normalize.css">
+        <!-- then link additional external CSS files in order from top to bottom -->
+        <link rel="stylesheet" href="styles/top-all.css">
+        <link rel="stylesheet" href="styles/middle-homepage.css">
+        <link rel="stylesheet" href="styles/bottom-all.css">
+        <!-- webfonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Economica:400,400i,700,700i" rel="stylesheet">
+                <!-- SlickNav and jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.css" />
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready( function() {
+               $('#top-nav').slicknav({
+                   'label':'Resources For...',
+                   prependTo:"#mobile-top-nav"
+               });
+               $('#main-nav').slicknav({
+                   'label':'Main Menu',
+                   prependTo:"#mobile-main-nav"
+               });
+               $('.slicknav_menu').css( { 'background':'transparent' } );
+
+                $('section p#discover').append(". Beaufort College founded 1795-- USC partner since 1959.");
+
+                $('<p class="weathertext">See What Weather Is At Our Campus:</p>').insertAfter("section#campus-buttons");
+
+                $('.weathertext').css({
+                    'text-align':'center',
+                    'color':'black',
+                    'text-size':'6em',
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <!-- top navigation -->
+        <div id="top-nav-container">
+            <nav id="top-nav">
+                <ul>
+                    <li><a href="#">Prospective Students</a></li>
+                    <li><a href="#">Current Students</a></li>
+                    <li><a href="#">Parents</a></li>
+                    <li><a href="#">Military &amp; Veterans</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Community &amp; Visitors</a></li>
+                    <li><a href="#" class="last-link">Faculty &amp; Staff</a></li>
+                    <li>
+                        <!-- search form -->
+                        <form>
+                            <label>Search</label>
+                            <input type="text">
+                            <input type="submit" value="&#128269;">
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="mobile-top-nav"></nav>
+        </div>
+        <!-- header for USCB logo -->
+        <div id="header-container">
+            <header id="logo-header">
+                <a href="index.html" alt="USCB Homepage"><div id="left-header-logo"></div></a>
+                <div id="right-header-image"></div>
+            </header>
+        </div>
+        <!-- main navigation -->
+        <div id="main-nav-container">
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#">About USCB</a></li>
+                    <li><a href="#">Admissions &amp; Aid</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="student-life.html">Student Life</a></li>
+                    <li><a href="athletics-and-recreation.html">Athletics</a></li>
+                    <li><a href="#">Giving to USCB</a></li>
+                    <li><a href="#">Arts &amp; Cultural Events</a></li>
+                    <li><a href="#" class="last-link">Lifelong Learning</a></li>
+                </ul>
+            </nav>
+            <nav id="mobile-main-nav"></nav>
+        </div>
+
+        <!-- main content -->
+        <div id="main-container">
+            <main>
+                <div id="main-image"></div>
+            </main>
+
+            <!-- container for campus buttons -->
+            <section id="campus-buttons">
+                <p id="discover">Discover USCB: Three distinctive campuses in the Carolina Sea Islands</p>
+                <div class="flex-container">
+                    <div><div class="campus" id="bluffton-campus-button">Bluffton Campus</div></div>
+                    <div><div class="campus" id="beaufort-campus-button">Beaufort Campus</div></div>
+                    <div><div class="campus" id="hiltonheadisland-campus-button">Hilton Head Island Campus</div></div>
+                </div>
+            </section>
+
+
+            <a class="weatherwidget-io" href="https://forecast7.com/en/32d43n80d67/beaufort/?unit=us" data-label_1="BEAUFORT" data-label_2="WEATHER" data-theme="weather_one" >BEAUFORT WEATHER</a>
+                    <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    </script>
+
+            <!-- section for facts -->
+              <section id='fun-facts'>
+                  <ul>Facts About USCB:</ul>
+                      <li>Student/Faculty Ratio: 18:1</li>
+                      <li>Diversity: 30% minority students</li>
+                      <li>30 academic programs and majors</li>
+              </section>
+
+
+            <!-- section for news and events -->
+            <section id="news-events">
+                <div id="news-events-grid">
+                    <!-- use grid layout for practice -->
+                    <h3>USCB News</h3>
+                    <div id="accordion-one">
+                        <button class="accordion">Hilton Head Open House</button>
+                            <div class="panel">
+                            <div id="news-item-image-1"></div>
+                            <p><a href="#">USCB to Hold Open House, Conduct Ribbon-Cutting Ceremony for Hilton Head Island Campus Nov. 14</a></p>
+                            </div>
+                        <button class="accordion">Artwork Exhibiton</button>
+                           <div class="panel">
+                            <div id="news-item-image-2"></div>
+                            <p><a href="#">USCB Presents Zipporah Camille Thompson Artwork Exhibition</a></p>
+                            </div>
+                        <button class="accordion">Hurricane Michael</button>
+                           <div class="panel">
+                            <div id="news-item-image-3"></div>
+                            <p><a href="#">USCB Professor Explains King Tides in Anticipation of Hurricane Michael</a></p>
+                            </div>
+                        <script>
+                            var acc = document.getElementsByClassName("accordion-two");
+                            var i;
+                            for (i = 0; i < acc.length; i++) {
+                            acc[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var panel = this.nextElementSibling;
+                            if (panel.style.display === "block") {
+                                panel.style.display = "none";
+                                } else {
+                                  panel.style.display = "block";
+                                }
+                              });
+                            }
+                            </script>
+                    </div>
+                    <h3>Events Calendar</h3>
+                    <div id="accordion-two">
+                        <button class="accordion">November 4, 2018</button>
+                           <div class="panel">
+                            <p><a href="#">Open House &amp; Ribbon-Cutting Ceremony for Hilton Head Island Campus</a></p>
+                            <p><b>Wednesday, November 14, 2018</b></p>
+                            <p>Ribbon Cutting 11am, Open House 11am-4pm</p>
+                            <p>Hilton Head Island campus</p>
+                            </div>
+                        <button class="accordion">Oct.5-Nov. 2, 2018</button>
+                           <div class="panel">
+                            <p><a href="#">Jarod Charzewski Exhibition</a></p>
+                            <p><b>Oct. 5 - Nov. 2, 2018</b></p>
+                            <p>Reception and Gallery Talk: Friday, Oct. 5, 5:30-7:30pm</p>
+                            <p>Sea Island Center Gallery, Beaufort campus</p>
+                        </div>
+                        <button class="accordion">Nov. 8-Dec. 8, 2018</button>
+                           <div class="panel">
+                            <p><a href="#">Zipporah Camille Thompson Exhibition</a></p>
+                            <p><b>Nov. 8 - Dec. 8, 2018</b></p>
+                            <p>Reception and Gallery Talk: Thursday, Nov. 8, 5-8pm, with talk at 6pm</p>
+                            <p>Sea Island Center Gallery, Beaufort campus</p>
+                        </div>
+                        <script>
+                            var acc = document.getElementsByClassName("accordion");
+                            var i;
+                            for (i = 0; i < acc.length; i++) {
+                            acc[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var panel = this.nextElementSibling;
+                            if (panel.style.display === "block") {
+                                panel.style.display = "none";
+                                } else {
+                                  panel.style.display = "block";
+                                }
+                              });
+                            }
+                            </script>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!-- footer, including additional navigation links -->
+        <footer>
+             <div class="link-nav-container"><div id="social-media-links">
+                <ul>
+                    <li><a href="#"><span id="facebook-icon"></span></a></li>
+                    <li><a href="#"><span id="twitter-icon"></span></a></li>
+                    <li><a href="#"><span id="instagram-icon"></span></a></li>
+                    <li><a href="#"><span id="linkedin-icon"></span></a></li>
+                    <li><a href="#"><span id="vimeo-icon"></span></a></li>
+                    <li><a href="#"><span id="youtube-icon"></span></a></li>
+                </ul>
+                </div></div>
+              <div class="row">
+               <div class="right">
+               <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Campus Alerts</a></li>
+                    <li><a href="#">Public Safety</a></li>
+                    <li><a href="#">USCB News</a></li>
+                    <li><a href="#">Jobs at USCB</a></li>
+                    <li><a href="#">Accreditation</a></li>
+                    <li><a href="#">Maps &amp; Directions</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Tuition &amp; Fees</a></li>
+                    <li><a href="#">Registration</a></li>
+                </ul>
+                   </nav>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Dining</a></li>
+                    <li><a href="#">Housing</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Self Service Carolina</a></li>
+                    <li><a href="#">Blackboard</a></li>
+                    <li><a href="#">VIP</a></li>
+                    <li><a href="#">ITSS Help Desk</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+                   </nav></div>
+
+            <div class="left"><div id="campus-addresses-container">
+               <p id="campus-center"><b>USCB Campuses and Centers</b></p>
+               <p id="campus"><a href="tel:+1-843-208-8000">(843)208-8000</a></p>
+                <div id="campus-addresses-grid">
+                    <div class="address-item">
+                        <p class="campus-name">Bluffton campus</p>
+                        <p class="campus-description">Main campus</p>
+                        <p class="campus-address-line1">One University Boulevard</p>
+                        <p class="campus-address-line2">Bluffton, SC 29909</p>
+                        <ul>
+                            <li>Admissions &amp; Campus Tours</li>
+                            <li>Osher Lifelong Learning at USCB</li>
+                        </ul>
+                    </div>
+
+                    <div class="address-item">
+                        <p class="campus-name">Beaufort campus</p>
+                        <p class="campus-address-line1">801 Carteret Street
+                        <p class="campus-address-line2">Beaufort, SC 29902</p>
+                        <ul>
+                            <li>Center for the Arts</li>
+                            <li>Sea Islands Center</li>
+                        </ul>
+                    </div>
+
+                    <div class="address-item">
+                        <p class="campus-name">Hilton Head Island campus</p>
+                        <p class="campus-address-line1">Hilton Head Island, SC 29928</p>
+                        <ul>
+                            <li>Center for Event Management and Hospitality Training (Sea Pines Resort)</li>
+                            <li>Coastal Ecology Research Project
+                            (Harbour Town Marina)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+            <p class="copyright-legal">Copyright &copy; 2018 by the Board of Trustees of the University of South Carolina</p>
+            <p class="copyright-legal">Copyright Policy &bull; Privacy &bull; General Policies &amp; Procedures</p>
+        </footer>
+
+    </body>
+</html>
